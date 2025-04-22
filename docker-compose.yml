@@ -1,0 +1,21 @@
+
+version: '3.8'
+services:
+  frontend:
+    build: ./react-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_GOOGLE_CLIENT_ID=505583162541-si17aaa8ohkhc82vl535vs37eb8p08ak.apps.googleusercontent.com
+      - REACT_APP_REDIRECT_URI=http://localhost:3000/callback
+
+  backend:
+    build: ./spring-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - frontend
+
+    environment:
+      - GITHUB_CLIENT_ID=Ov23lia7mEk3ChXwLnjO
+      - GITHUB_CLIENT_SECRET=f93492bf743ecb0dfc8b07633dfe07fc0f26a26b

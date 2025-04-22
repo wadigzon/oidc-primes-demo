@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "e8b3dc7e15f2434ba6cb8af240b3e9c1"
+
+  github:
+    client-id: Ov23lia7mEk3ChXwLnjO     # your actual GitHub client ID
+    client-secret: f93492bf743ecb0dfc8b07633dfe07fc0f26a26b # your actual GitHub client secret
+
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+          # comment this out, we'll define custom validator
+          # issuer-uri: https://accounts.google.com
